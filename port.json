@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "name": "dokimon.zip",
+  "items": [
+    "Dokimon.sh",
+    "dokimon"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Dokimon",
+    "porter": [
+      "Jeod"
+    ],
+    "desc": "\"Whoa, watch out!\" That was close, didn't you know Dokimon are dangerous!?ーStep into Xelos region, where you'll set off on an adventure to uncover the mystery behind your missing childhood friend.",
+    "desc_md": null,
+    "inst": "Download the beta on Steam and copy all the data to `ports/dokimon/gamedata`. On first run the game will be patched. If you like the game, wishlist it!",
+    "inst_md": null,
+    "genres": [
+      "rpg"
+    ],
+    "image": null,
+    "rtr": true,
+    "exp": false,
+    "runtime": null,
+    "reqs": [],
+    "arch": [
+      "aarch64"
+    ]
+  }
+}
