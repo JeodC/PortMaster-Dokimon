@@ -70,13 +70,6 @@ zip_archive() {
         mkdir -p saves
 }
 
-# Use move_data function while the game is fairly new and is receiving several updates.
-move_data() {
-    mkdir -p saves
-    mv -f ./assets/* ./saves
-    echo "Moved game assets to saves directory."
-}
-
 process_game() {
     # Delete unnecessary files
     rm -rf $DATADIR/*.exe $DATADIR/*.dll $DATADIR/.gitkeep
@@ -86,12 +79,11 @@ process_game() {
     echo "Applying xdelta patch"
     apply_xdelta
     sleep 1
-   # Do not compress audio on 2024.11
+    # Do not compress audio on 2024.11
     #echo "Compressing audio..."
     #compress_audio
     sleep 1
     echo "Finishing up..."
-    move_data
     #zip_archive
     sleep 1
 	

@@ -25,7 +25,7 @@ cd $GAMEDIR
 $ESUDO chmod +x -R $GAMEDIR/*
 
 # Exports
-export LD_LIBRARY_PATH="/usr/lib:$GAMEDIR/lib:$GAMEDIR/libs:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$GAMEDIR/lib:$GAMEDIR/libs:$LD_LIBRARY_PATH"
 export PATCHER_FILE="$GAMEDIR/tools/patchscript"
 export PATCHER_GAME="$(basename "${0%.*}")" # This gets the current script filename without the extension
 export PATCHER_TIME="2 to 5 minutes"
@@ -55,9 +55,9 @@ if [ -f "$GAMEDIR/patchlog.txt" ]; then
 fi
 
 # Assign gptokeyb and load the game
-$GPTOKEYB "gmloader.aarch64" -c "dokimon.gptk" &
-pm_platform_helper "$GAMEDIR/gmloader.aarch64"
-./gmloader.aarch64 -c gmloader.json
+$GPTOKEYB "gmloadernext.aarch64" -c "dokimon.gptk" &
+pm_platform_helper "$GAMEDIR/gmloadernext.aarch64"
+./gmloadernext.aarch64 -c gmloader.json
 
 # Cleanup
 pm_finish
