@@ -27,16 +27,8 @@ Buy the game on Steam and copy all the data to `ports/dokimon/assets`. On first 
 | D-PAD / JOYSTICK  | Move                                  |
 | A                 | Confirm / FFWD (In-Battle)            |
 | B                 | Cancel / Run (Hold)                   |
-| X                 |                                       |
-| Y                 |                                       |
-| L1                |                                       |
-| L2                |                                       |
-| R1                |                                       |
-| R2                |                                       |
 | L3                | Stats (In-Battle)                     |
-| R3                |                                       |
 
 ## Thanks
 Yanako RPGs -- The amazing game  
-JohnnyOnFlame -- GMLoader-Next and TextureRepacker via UTMT  
-Cyril "kotzebuedog" Delétré -- GMTools Audio Compressor  
+JohnnyOnFlame -- GMLoader-Next  
