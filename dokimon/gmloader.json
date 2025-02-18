@@ -1,7 +1,8 @@
 {
-    "save_dir" : "assets",
+    "save_dir" : "saves",
     "apk_path" : "dokimon.port",
     "show_cursor" : false,
     "disable_controller" : false,
-    "force_platform" : "os_windows"
+	"disable_depth" : false,
+    "force_platform" : "os_android"
 }
