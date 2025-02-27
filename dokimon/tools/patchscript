@@ -35,8 +35,8 @@ remove_files() {
 apply_xdelta() {
     echo "Applying xdelta patch"
     # Check if the data.win file exists and apply xdelta
-    if [ -f "$DATADIR/data.win" ]; then
-        output=$(xdelta3 -d -s "$DATADIR/data.win" -f "./tools/patches/dokimon.xdelta" "$DATADIR/game.droid" 2>&1)
+    if [ -f "$DATADIR/data.win" ] && [ -f "$TOOLDIR/patches/dokimon.xdelta" ]; then
+        output=$(xdelta3 -d -s "$DATADIR/data.win" -f "$TOOLDIR/patches/dokimon.xdelta" "$DATADIR/game.droid" 2>&1)
         if [ $? -eq 0 ]; then
             echo "Patch applied successfully"
             echo "$output"
@@ -50,7 +50,8 @@ apply_xdelta() {
             exit 1
         fi
     else
-        echo "No data.win file found to patch!"
+        echo "No data.win file found to patch or no patch file provided."
+        mv "$DATADIR/data.win" "$DATADIR/game.droid"
         sleep 1
     fi
 }
@@ -97,7 +98,8 @@ zip_archive() {
 
 process_game() {
     remove_files
-    #apply_xdelta
+    apply_xdelta
+    # We may not need audio compression for this game. Disable it for now.
     #compress_audio
     zip_archive
 	
