@@ -67,10 +67,10 @@ compress_audio() {
 
 zip_archive() {
         echo "Finishing up..."
-        zip -r -0 $DATAFILE ./assets/
+        touch $DATADIR/config.ini
+        zip -r -0 $DATAFILE $DATADIR
         mkdir -p saves
-        touch saves/config.ini
-        rm -rf assets
+        rm -rf $DATADIR
         sleep 1
 }
 
