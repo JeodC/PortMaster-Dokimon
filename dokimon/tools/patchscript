@@ -70,7 +70,7 @@ zip_archive() {
         touch $DATADIR/config.ini
         zip -r -0 $DATAFILE ./assets/
         mkdir -p saves
-        rm -rf $DATADIR
+        rm -rf $DATADIR/*
         sleep 1
 }
 

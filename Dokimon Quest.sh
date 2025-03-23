@@ -30,8 +30,8 @@ export PATCHER_GAME="$(basename "${0%.*}")" # This gets the current script filen
 export PATCHER_TIME="2 to 5 minutes"
 export SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
 
-# Check if patchlog.txt to skip patching
-if [ ! -f patchlog.txt ]; then
+# Check if we need to patch the game
+if [ ! -f patchlog.txt ] || [ -f $GAMEDIR/assets/data.win ]; then
     if [ -f "$controlfolder/utils/patcher.txt" ]; then
         source "$controlfolder/utils/patcher.txt"
         $ESUDO kill -9 $(pidof gptokeyb)
