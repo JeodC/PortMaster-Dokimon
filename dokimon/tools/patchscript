@@ -68,7 +68,7 @@ compress_audio() {
 zip_archive() {
         echo "Finishing up..."
         touch $DATADIR/config.ini
-        zip -r -0 $DATAFILE $DATADIR
+        zip -r -0 $DATAFILE ./assets/
         mkdir -p saves
         rm -rf $DATADIR
         sleep 1
