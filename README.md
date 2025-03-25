@@ -27,7 +27,8 @@ Buy the game on Steam and copy all the data to `ports/dokimon/assets`. On first 
 | D-PAD / JOYSTICK  | Move                                  |
 | A                 | Confirm / FFWD (In-Battle)            |
 | B                 | Cancel / Run (Hold)                   |
-| L3                | Stats (In-Battle)                     |
+| L1                | Take screenshot                       |
+| R1                | Stats (In-Battle)                     |
 
 ## Thanks
 Yanako RPGs -- The amazing game  
