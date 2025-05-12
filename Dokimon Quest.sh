@@ -38,8 +38,6 @@ if [ ! -f patchlog.txt ] || [ -f $GAMEDIR/assets/data.win ]; then
     else
         echo "This port requires the latest version of PortMaster."
     fi
-else
-    echo "Patching process already completed. Skipping."
 fi
 
 # Display loading splash
